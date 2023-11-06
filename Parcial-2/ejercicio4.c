@@ -7,7 +7,7 @@ int pedir_entero(char n) {
     return x;
 }
 
-int pedir_float(char n) {
+float pedir_float(char n) {
     float x;
     printf("Ingrese un valor que se almacenará en la variable %c \n", n);
     scanf("%f", &x);
@@ -69,7 +69,8 @@ int main(void) {
     const int N = 5;
     struct persona_t a[N];
     pedir_arreglo_asociaciones(N, a);
-    struct stats_t x = calcular_estadisticas(a, N);
+    struct stats_t x;
+    x = calcular_estadisticas(a, N);
     printf("Altura máxima: %f. Altura mínima: %f. Altura media: %f.", x.altura_maxima, x.altura_minima, x.altura_media);
     return 0;
 }
