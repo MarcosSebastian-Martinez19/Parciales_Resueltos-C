@@ -11,7 +11,7 @@ struct total_t {
     int peso_total;
 };
 
-struct total_t calcular_montos(struct producto_t a[], int tam){
+struct total_t calcular_montos(struct producto_t a[], int tam) {
     struct total_t total;
     total.peso_total = 0;
     total.precio_total = 0;
